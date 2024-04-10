@@ -5,7 +5,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 
 app = FastAPI()
-templates = Jinja2Templates(directory='Seminars/5HW/templates')
+templates = Jinja2Templates(directory='templates')
 
 
 class Users(BaseModel):
