@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пользователи</title>
+</head>
+<body>
+    <div class="row">
+    <h1 class="col-12 text-monospace text-center">Пользователи</h1>
+    {% for user in users %}
+        <div class="col-12 col-md-12 col-lg-6">
+            <p>ID: {{ user.id }}</p>
+            <p>Имя: {{ user.name }}</p>
+            <p>Почта: {{ user.email }}</p>
+            <p>Пароль: {{ user.password }}</p>
+        </div>
+        <br>
+    {% endfor %}
+    <form action="http://127.0.0.1:8000/add_user" method="post">
+        <input type='number' name='id' placeholder="Введите ид пользователя"><br>
+        <br>
+        <input type='text' name='name' placeholder="Введите имя пользователя"><br>
+        <br>
+        <input type='text' name='email' placeholder="Введите имя email "><br>
+        <br>
+        <input type='text' name='password' placeholder="Введите имя пароль "><br>
+        <br>
+        <input type='submit' value='Отправить'>
+    <br>
+    </form>
+</div>
+</body>
+</html>
